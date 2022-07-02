@@ -1,0 +1,35 @@
+{
+  "name": "frontend-setup",
+  "version": "1.0.1",
+  "description": "A minimal frontend setup for a new project",
+  "author": "Abhishek Sawant",
+  "main": "index.html",
+  "scripts": {
+    "compile-sass": "sass scss/style.scss:dist/css/style.css",
+    "compile-no-map-sass": "sass scss/style.scss:dist/css/style.css --no-source-map",
+    "watch-sass": "onchange scss/ -- npm run compile-sass",
+    "compile-js": "terser js/*.js --compress --mangle --output dist/js/script.js --source-map \"root='js',url='script.js.map'\" ",
+    "compile-no-map-js": "terser js/*.js --compress --mangle --output dist/js/script.js",
+    "watch-js": "onchange js/*.js -- npm run compile-js",
+    "post-prefix": "postcss dist/css/style.css -u autoprefixer -r --no-map",
+    "post-nano": "postcss dist/css/style.css -u cssnano -r --no-map",
+    "watch": "npm-run-all --parallel watch-*",
+    "compile": "npm-run-all --parallel compile-*",
+    "post": "postcss dist/css/style.css -u autoprefixer -u cssnano -r --no-map",
+    "serve": "browser-sync start --server ./ --files ./",
+    "start": "npm-run-all compile --parallel watch serve",
+    "build": "npm-run-all compile-no-map-* post del-map",
+    "del-map": "del-cli dist/**/*.map"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.4",
+    "browser-sync": "^2.27.9",
+    "cssnano": "^5.1.4",
+    "del-cli": "^4.0.1",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^7.1.0",
+    "postcss-cli": "^9.1.0",
+    "sass": "^1.49.9",
+    "terser": "^5.12.1"
+  }
+}
