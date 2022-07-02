@@ -1,4 +1,6 @@
 :root {
+  --font-title: "Readex Pro", sans-serif;
+  --font-body: "Inter", sans-serif;
   --clr-white: hsl(0, 0%, 100%);
   --clr-black: hsl(0, 0%, 0%);
   --clr-title: hsl(0, 0%, 5%);
@@ -48,11 +50,6 @@ h6 {
   overflow-wrap: break-word;
 }
 
-:root {
-  --font-title: "Readex Pro", sans-serif;
-  --font-body: "Inter", sans-serif;
-}
-
 body {
   font-family: var(--font-body);
   color: var(--clr-body);
@@ -68,17 +65,18 @@ h6 {
   color: var(--clr-title);
 }
 
-:root {
-  --max-width: 1200px;
-}
-
 section {
-  padding: 4rem 0;
+  padding-block: 3.125rem;
+}
+@media (min-width: 768px) {
+  section {
+    padding-block: 5rem;
+  }
 }
 
 .container {
-  max-width: min(100% - 2.5rem, var(--max-width));
-  margin: 0 auto;
+  max-width: min(90%, 1200px);
+  margin-inline: auto;
 }
 
 /*# sourceMappingURL=style.css.map */
