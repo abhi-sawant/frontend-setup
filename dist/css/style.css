@@ -8,39 +8,26 @@
 *,
 *::before,
 *::after {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
+  margin: 0;
 }
 
-ul {
-  list-style: none;
-}
-
-html {
-  scroll-behavior: smooth;
+html,
+body {
+  min-height: 100%;
 }
 
 body {
-  min-height: 100vh;
-  text-rendering: optimizeSpeed;
   line-height: 1.5;
-}
-
-h1,
-h2,
-h3 {
-  line-height: 1.2;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-  display: inline-block;
+  -webkit-font-smoothing: antialiased;
 }
 
 img,
-picture {
+picture,
+video,
+canvas,
+svg {
+  display: inline-block;
   max-width: 100%;
 }
 
@@ -51,20 +38,16 @@ select {
   font: inherit;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  html:focus-within {
-    scroll-behavior: auto;
-  }
-
-  *,
-*::before,
-*::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
 }
+
 :root {
   --font-title: "Readex Pro", sans-serif;
   --font-body: "Inter", sans-serif;
