@@ -1,8 +1,8 @@
-@use "../abstracts/" as *;
+@use '../abstracts/' as *;
 
 section {
-   padding-block: rem(50);
-   @include breakpoint(md) {
-      padding-block: rem(80);
-   }
+  padding-block: rem(50);
+  @include breakpoint(md) {
+    padding-block: rem(80);
+  }
 }

@@ -1,8 +1,8 @@
 :root {
-   --font-title: "Readex Pro", sans-serif;
-   --font-body: "Inter", sans-serif;
-   --clr-white: hsl(0, 0%, 100%);
-   --clr-black: hsl(0, 0%, 0%);
-   --clr-title: hsl(0, 0%, 5%);
-   --clr-body: hsl(0, 0%, 15%);
+  --font-title: system-ui, sans-serif;
+  --font-body: system-ui, sans-serif;
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-black: hsl(0, 0%, 0%);
+  --clr-title: hsl(0, 0%, 5%);
+  --clr-body: hsl(0, 0%, 15%);
 }
