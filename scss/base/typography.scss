@@ -1,8 +1,8 @@
-@use "../abstracts/" as *;
+@use '../abstracts/' as *;
 
 body {
-   font-family: var(--font-body);
-   color: var(--clr-body);
+  font-family: var(--font-body);
+  color: var(--clr-body);
 }
 
 h1,
@@ -11,6 +11,6 @@ h3,
 h4,
 h5,
 h6 {
-   font-family: var(--font-title);
-   color: var(--clr-title);
+  font-family: var(--font-title);
+  color: var(--clr-title);
 }

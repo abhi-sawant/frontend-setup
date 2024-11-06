@@ -1,42 +1,85 @@
+:root {
+  interpolate-size: allow-keywords;
+}
+
 *,
-*::before,
-*::after {
-   box-sizing: border-box;
-   margin: 0;
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:has(:target) {
+  scroll-behavior: smooth;
+  scroll-padding-top: 3rem;
 }
 
 html,
 body {
-   min-height: 100%;
+  min-height: 100vh;
+}
+
+html {
+  hanging-punctuation: first last;
 }
 
 body {
-   line-height: 1.5;
-   -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeSpeed;
+  font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.125;
+  text-wrap: balance;
+}
+
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+p {
+  text-wrap: pretty;
 }
 
 img,
-picture,
-video,
-canvas,
-svg {
-   display: inline-block;
-   max-width: 100%;
+picture {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  font-style: italic;
+}
+
+a {
+  color: inherit;
 }
 
 input,
 button,
 textarea,
 select {
-   font: inherit;
+  font: inherit;
 }
 
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-   overflow-wrap: break-word;
+code,
+kbd,
+samp {
+  font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono',
+    monospace;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
