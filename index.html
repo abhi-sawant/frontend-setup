@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -7,15 +7,33 @@
 
     <!-- Your stylesheet  -->
     <link rel="stylesheet" href="dist/css/style.css" />
-    <title>Title</title>
+    <title>Frontend setup</title>
   </head>
   <body>
-    <section>
-      <div class="container">
-        <h1>Hello!</h1>
-        <p>This page was build with minimal frontend setup.</p>
+    <header class="header">
+      <div class="container header__container">
+        <div class="header__logo">
+          <img src="assets/img/logo.svg" alt="logo" />
+        </div>
+        <nav class="header__nav">
+          <ul class="header__nav__list">
+            <li class="header__nav__item">
+              <a href="#" class="header__nav__link">Link 1</a>
+            </li>
+            <li class="header__nav__item">
+              <a href="#" class="header__nav__link">Link 2</a>
+            </li>
+            <li class="header__nav__item">
+              <a href="#" class="header__nav__link">Link 3</a>
+            </li>
+          </ul>
+        </nav>
       </div>
-    </section>
+    </header>
+    <main class="main main--home">
+      <h1>Frontend setup</h1>
+      <button class="button button--primary" onclick="themeSwitcher()">Switch theme</button>
+    </main>
     <script src="dist/js/script.js"></script>
   </body>
 </html>

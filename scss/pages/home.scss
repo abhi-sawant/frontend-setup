@@ -1,0 +1,11 @@
+@use '../abstracts/' as *;
+
+.main {
+  &--home {
+    display: grid;
+    min-height: 100vh;
+    place-content: center;
+    place-items: center;
+    gap: pxtorem(24);
+  }
+}
