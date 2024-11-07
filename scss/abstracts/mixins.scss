@@ -1,6 +1,7 @@
 @use 'sass:map';
 
 $breakpoints-up: (
+  'xs': '480px',
   'sm': '576px',
   'md': '768px',
   'lg': '992px',
@@ -9,6 +10,7 @@ $breakpoints-up: (
 );
 
 $breakpoints-down: (
+  'xs': '479.98px',
   'sm': '575.98px',
   'md': '767.98px',
   'lg': '991.98px',

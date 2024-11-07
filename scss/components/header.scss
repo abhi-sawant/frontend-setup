@@ -1,0 +1,33 @@
+@use '../abstracts/' as *;
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--clr-white);
+  z-index: 10;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  padding: pxtorem(10) 0;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo {
+    img {
+      height: pxtorem(60);
+    }
+  }
+  &__nav {
+    &__list {
+      display: flex;
+      gap: pxtorem(24);
+      list-style: none;
+    }
+    &__link {
+      text-decoration: none;
+      font-size: pxtorem(18);
+      font-weight: 500;
+    }
+  }
+}
