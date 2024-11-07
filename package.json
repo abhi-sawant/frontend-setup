@@ -5,21 +5,18 @@
   "author": "Abhishek Sawant",
   "main": "index.html",
   "scripts": {
-    "compile-sass": "sass scss/style.scss:dist/css/style.css",
-    "build-sass": "sass scss/style.scss:dist/css/style.css --no-source-map",
+    "compile-sass": "sass scss/style.scss:css/style.css",
+    "build-sass": "sass scss/style.scss:css/style.css --no-source-map",
     "watch-sass": "onchange scss/ -- npm run compile-sass",
-    "compile-js": "terser js/script.js --compress --mangle --output dist/js/script.js --source-map \"root='js',url='script.js.map'\" ",
-    "build-js": "terser js/script.js --compress --mangle --output dist/js/script.js",
-    "watch-js": "onchange js/script.js -- npm run compile-js",
-    "post-prefix": "postcss dist/css/style.css -u autoprefixer -r --no-map",
-    "post-nano": "postcss dist/css/style.css -u cssnano -r --no-map",
+    "post-prefix": "postcss css/style.css -u autoprefixer -r --no-map",
+    "post-nano": "postcss css/style.css -u cssnano -r --no-map",
     "watch": "npm-run-all --parallel watch-*",
     "compile": "npm-run-all --parallel compile-*",
-    "post": "postcss dist/css/style.css -u autoprefixer -u cssnano -r --no-map",
+    "post": "postcss css/style.css -u autoprefixer -u cssnano -r --no-map",
     "serve": "browser-sync start --server ./ --files ./",
     "start": "npm-run-all compile --parallel watch serve",
     "build": "npm-run-all build-* post del-map",
-    "del-map": "del-cli dist/**/*.map",
+    "del-map": "del-cli css/**/*.map",
     "pretty": "prettier --write \"./**/*.{html,js,scss}\""
   },
   "dependencies": {
@@ -31,7 +28,6 @@
     "onchange": "^7.1.0",
     "postcss-cli": "^11.0.0",
     "prettier": "^3.3.3",
-    "sass": "^1.80.6",
-    "terser": "^5.36.0"
+    "sass": "^1.80.6"
   }
 }
